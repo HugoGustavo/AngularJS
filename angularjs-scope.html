@@ -6,7 +6,7 @@
     <body>
         <h2> Angular JS Sample Application</h2>
         <div ng-app="mainApp" ng-controller="shapeController">
-            <p>{{ message }} <br/> {{ types }} </p>
+            <p>{{ message }} <br/> {{ type }} </p>
             <div ng-controller="circleController">
                 <p> {{ message }} <br/> {{ type }} </p>
             </div>
@@ -20,6 +20,11 @@
                 $scope.message = "In shape Controller";
                 $scope.type = "Shape";
             });
+
+            mainApp.controller("circleController", function($scope){
+                $scope.message = "In circle controller";
+            });
+
             mainApp.controller("squareController", function($scope){
                 $scope.message = "In square controller";
                 $scope.type = "Square";
